@@ -1,6 +1,6 @@
 try {
     <# creating new folder and user data script #>
-    cd $PSScriptRoot
+    Set-Location $PSScriptRoot
     $newfolder = Read-Host -Prompt "`nCreating new EC2 Instance(s) based on your prompts.
     `nEnter a unique name for new folder creation and output file for this session. (date is automatically appended) "
     $newfolder += ".{0:MM.dd.yyy}" -f (Get-Date)
@@ -227,6 +227,6 @@ echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
     }
 }
 finally {
-  cd ..
+  Set-Location ..
   Write-Host "Script has concluded.`n`n-----------------------------------------`n`n`n"
 }

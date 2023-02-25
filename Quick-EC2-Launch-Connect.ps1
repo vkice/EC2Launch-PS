@@ -1,5 +1,5 @@
 try {
-    cd $PSScriptRoot
+    Set-Location $PSScriptRoot
     <# creating new folder key pair and user data script #>
     $newfolder = Read-Host -Prompt "`nCreating new EC2 Instance(s) based on your prompts.
     `nEnter a unique name for new folder creation, key pair name, and output file for this session. (date is automatically appended) "
@@ -34,7 +34,7 @@ try {
     aws ec2 describe-instances --region $region --instance-ids $createdid --query 'Reservations[].Instances[].PublicDnsName' --output text | Out-File -encoding ascii -filepath $PSScriptRoot\$newfolder\PublicDNSName.txt
     $publicip = Get-Content -Path $PSScriptRoot\$newfolder\PublicDNSName.txt
 
-    start powershell -argumentlist '-noexit','ssh -i $PSScriptRoot\$newfolder\$keyinput.pem -l ec2-user $publicip'
+    Start-Process powershell -argumentlist '-noexit','ssh -i $PSScriptRoot\$newfolder\$keyinput.pem -l ec2-user $publicip'
 
     $after1 = "launch"
     while ($after1 -eq "launch") {
@@ -54,6 +54,6 @@ try {
         }
 }
 finally {
-  cd ..
+  Set-Location ..
   Write-Host "Script has concluded.`n`n-----------------------------------------`n`n`n"
 }

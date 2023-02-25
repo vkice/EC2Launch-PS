@@ -1,5 +1,5 @@
 try {
-    cd $PSScriptRoot
+    Set-Location $PSScriptRoot
     <# creating new folder key pair and user data script #>
     $newfolder = Read-Host -Prompt "`nCreating new EC2 Instance(s) based on your prompts.
     `nEnter a unique name for new folder creation, key pair name, and output file for this session. (date is automatically appended) "
@@ -51,6 +51,6 @@ try {
         }
 }
 finally {
-  cd ..
+  Set-Location ..
   Write-Host "Script has concluded.`n`n-----------------------------------------`n`n`n"
 }
