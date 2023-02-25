@@ -13,7 +13,7 @@ Simple Powershell script for quickly spinning up EC2 Instances on AWS for testin
   - Putty-EC2-Launch: Similar to above but generates a PPK key instead, for use with Putty.
   - AIO-EC2-Launch: Allows choice of instance type and number of instances to launch.
 
-# Issues:
+# Issues
 
   - Finding copy to clipboard does not work too well, output is provided for a quick Ctrl+Shift+V copy.
   - Cleanup is limited to keeping PS window open, otherwise resources should be deleted to prevent unnecessary costs.
