@@ -2,7 +2,6 @@
 Simple Powershell script for quickly spinning up EC2 Instances on AWS for testing purposes.
 
   - AWS CLI must be installed and profile/credentials configured.
-  - 
   - Generates SSH Keys to use for launched Instance.
   - Designed to quickly spin up a test instance from a Windows workstation.
   - Option to terminate instance and SSH keys.
