@@ -1,5 +1,5 @@
 # EC2Launch-PS
-Simple Powershell script for quickly spinning up EC2 Instances on AWS for testing purposes.
+Simple Powershell script for quickly spinning up EC2 Instances on AWS for testing purposes. Created for personal use.
 
   - AWS CLI must be installed and profile/credentials configured.
   - Generates SSH Keys to use for launched Instance.
