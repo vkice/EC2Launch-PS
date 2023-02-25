@@ -11,9 +11,15 @@ Simple Powershell script for quickly spinning up EC2 Instances on AWS for testin
 
 # Versions
 
-  - Quick-EC2-Launch-Connect: Launched a single t2.micro instance with a new SSH key, creates a new PS window allowing SSH access with original PS window allowing cleanup option to delete Instance and SSH key pair.
+  - Quick-EC2-Launch-Connect: Launched a single t2.micro instance with a new SSH key, creates a new PS window allowing SSH access with original PS window allowing cleanup option to delete Instance and SSH key pair, with default VPC/Subet/SG settings.
   - Putty-EC2-Launch: Similar to above but generates a PPK key instead, for use with Putty.
-  - AIO-EC2-Launch: Allows choice of instance type, number of instances to launch, choice of PEM/PPK key.
+  - AIO-EC2-Launch: Allows the following choices
+    - Instance type
+    - Number of instances
+    - PEM or PPK key
+    - Subnet
+    - Security Group rules for current local public IP address
+    - User-data
 
 # Issues
 
